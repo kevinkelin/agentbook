@@ -1,4 +1,58 @@
-site_name: My Docs
+site_name: 大模型 Agent 之旅
+site_description: 构建大模型 Agent 的最佳实践
 site_url: https://agent.yangyanxing.com
+site_author: 杨彦星
 theme:
   name: material
+  features:
+    - content.code.copy
+    - palette-toggle
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+
+  palette:
+    - scheme: default # 日间模式
+      # primary: grey # 主色调
+      # accent: cyan # 高亮色
+      toggle:
+        icon: material/weather-night # 切换到夜间模式的图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: black
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+  language: zh
+
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search

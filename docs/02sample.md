@@ -115,11 +115,11 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
     app = FastAPI()
 
-    @app.get("/items/{item_id}")
-    async def read_item(item_id: str, q: Union[str, None] = None):
+    @app.get("/items/{item_name}")
+    async def read_item(item_name: str, q: Union[str, None] = None):
         if q:
-            return {"item_id": item_id, "q": q}
-        return {"item_id": item_id}
+            return {"item_id": item_name, "q": q}
+        return {"item_id": item_name}
     ```
 
 

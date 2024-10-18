@@ -16,16 +16,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-
-## python code 
-
-```python
-@router.post("/query")
-async def query(
-        query: graphrag.GraphQueryModel,
-        graphragService: GraphragService = Depends(GraphragService)
-):
-    user = "yangyanxing@360.cn"
-    result = await graphragService.query(query.query, query.dataset_ids, user, prompt=query.prompt)
-    return ResponseModel(data=result)
-```
